@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Introducción al Programa de Gestión de Visitas</title>
+        <link rel="stylesheet" href="intro.css">
+    </head>
+    <body>
+        <h1>Gestor de Visitas y Temperaturas</h1>
+        <img src="../images/viaje.jpg" alt="Viaje">
+        <p>
+            Esta aplicación de escritorio, desarrollada en Java con <strong>Swing</strong> (<code>javax.swing.JFrame</code> y <code>JDialog</code>), permite a los usuarios <strong>registrar, visualizar y gestionar</strong> información sobre sus viajes o visitas.
+        </p>
+        <p>
+            El programa administra una lista de objetos <code>Visita</code>, cada uno de los cuales contiene la <strong>Ciudad</strong>, la <strong>Fecha prevista</strong>, la <strong>Estación</strong> del año, y las <strong>Temperaturas</strong> (mínima, máxima y promedio) registradas.
+        </p>
+        <p>
+            La interfaz principal muestra un listado tabular (<code>JTable</code>) de todas las visitas, permitiendo al usuario:
+        <ul>
+            <li>Visualizar los datos de las visitas.</li>
+            <li>Ordenar las visitas, por defecto por la temperatura promedio de forma descendente.</li>
+            <li>Cambiar el aspecto visual de la aplicación (<strong>Look and Feel</strong>).</li>
+            <li>Acceder a formularios de registro para nuevas visitas o para añadir temperaturas a la última visita registrada.</li>
+            <li>Eliminar registros de visitas por nombre de ciudad.</li>
+        </ul>
+    <p>
+        La aplicación incluye validaciones en los formularios de registro (usando la librería NetBeans Validation API) para asegurar la integridad de los datos.
+    </p>
+</body>
+</html>

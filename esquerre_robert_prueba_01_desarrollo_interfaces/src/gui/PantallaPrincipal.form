@@ -7,14 +7,14 @@
         <Menu class="javax.swing.JMenu" name="jMenu">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jMenu.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jMenu.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemCiudadFecha">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jMenuItemCiudadFecha.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                  <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jMenuItemCiudadFecha.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -24,7 +24,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemTemperaturas">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jMenuItemTemperaturas.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                  <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jMenuItemTemperaturas.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
               </Properties>
               <Events>
@@ -60,26 +60,34 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="24" max="32767" attributes="0"/>
-              <Component id="jPanel1" min="-2" pref="370" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <Component id="jPanel1" min="-2" pref="370" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jButtonHelp" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jScrollPane1" pref="219" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" pref="218" max="32767" attributes="0"/>
               <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
               <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonHelp" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -117,7 +125,7 @@
         <Component class="javax.swing.JLabel" name="jLabelImgEstacion">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jLabelImgEstacion.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jLabelImgEstacion.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -127,7 +135,7 @@
               <Color blue="0" green="0" red="99" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jButtonEliminarCiudad.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jButtonEliminarCiudad.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
           <Events>
@@ -143,7 +151,7 @@
         <Component class="javax.swing.JLabel" name="jLabelTema">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-              <ResourceString bundle="registroVisitasyClima/gui/Bundle.properties" key="PantallaPrincipal.jLabelTema.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+              <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jLabelTema.text_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
           </Properties>
         </Component>
@@ -167,5 +175,18 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="jButtonHelp">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="gui/Bundle.properties" key="PantallaPrincipal.jButtonHelp.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHelpActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

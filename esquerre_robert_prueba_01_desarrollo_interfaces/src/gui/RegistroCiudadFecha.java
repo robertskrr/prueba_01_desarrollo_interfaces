@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package registroVisitasyClima.gui;
+package gui;
 
 import javax.swing.event.ChangeEvent;
 import org.netbeans.validation.api.builtin.stringvalidation.StringValidators;
 import org.netbeans.validation.api.ui.ValidationGroup;
-import registroVisitasyClima.dto.Visita;
-import registroVisitasyClima.logica.LogicaVisitas;
+import dto.Visita;
+import logica.LogicaVisitas;
 
 /**
  *
@@ -46,9 +46,9 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabelCiudad.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jLabelCiudad.text")); // NOI18N
+        jLabelCiudad.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jLabelCiudad.text_1")); // NOI18N
 
-        jTextFieldCiudad.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.Ciudad.text")); // NOI18N
+        jTextFieldCiudad.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.Ciudad.text_1")); // NOI18N
         jTextFieldCiudad.setName("Ciudad"); // NOI18N
         jTextFieldCiudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +56,7 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
             }
         });
 
-        jLabelCiudad1.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jLabelCiudad1.text")); // NOI18N
+        jLabelCiudad1.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jLabelCiudad1.text_1")); // NOI18N
 
         javax.swing.GroupLayout jPanelLayout = new javax.swing.GroupLayout(jPanel);
         jPanel.setLayout(jPanelLayout);
@@ -70,7 +70,7 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextFieldCiudad)
-                    .addComponent(jDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)))
+                    .addComponent(jDateChooser, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)))
         );
         jPanelLayout.setVerticalGroup(
             jPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,7 +87,7 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
         );
 
         jButtonRegistrar.setBackground(new java.awt.Color(0, 153, 0));
-        jButtonRegistrar.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jButtonRegistrar.text")); // NOI18N
+        jButtonRegistrar.setText(org.openide.util.NbBundle.getMessage(RegistroCiudadFecha.class, "RegistroCiudadFecha.jButtonRegistrar.text_1")); // NOI18N
         jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarActionPerformed(evt);
@@ -106,9 +106,9 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
                             .addComponent(jPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(validationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
+                        .addGap(122, 122, 122)
                         .addComponent(jButtonRegistrar)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,9 +117,9 @@ public class RegistroCiudadFecha extends javax.swing.JDialog {
                 .addComponent(validationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonRegistrar)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();

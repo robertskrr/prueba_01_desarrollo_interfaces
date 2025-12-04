@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Guía de Uso del Programa de Gestión de Visitas</title>
+        <link rel="stylesheet" href="guia.css">
+    </head>
+    <body>
+        <h1>Manual de Usuario</h1>
+
+        <h2>1. Pantalla Principal</h2>
+        <p>
+            Al iniciar la aplicación, se muestra la tabla principal con los registros de visitas. Por defecto, la tabla está ordenada por la <strong>Temperatura Promedio (Tº promedio)</strong> de mayor a menor.
+        </p>
+
+        <h3>Funcionalidades Directas:</h3>
+        <ul>
+            <li><strong>Tabla de Datos:</strong> Muestra la <strong>Ciudad</strong>, <strong>Fecha</strong>, <strong>Estación</strong>, <strong>Tº mín</strong>, <strong>Tº máx</strong> y <strong>Tº promedio</strong> de cada visita.</li>
+            <li><strong>Cambiar Tema (Look and Feel):</strong> Use el desplegable al final de la ventana (etiquetado como "Tema") para seleccionar y aplicar diferentes estilos visuales a la aplicación.</li>
+            <li><strong>Eliminar Ciudad:</strong> Pulse el botón rojo <strong>"Eliminar Ciudad"</strong> para eliminar un registro. Se le pedirá el nombre de la ciudad a borrar.</li>
+            <li><strong>Ayuda:</strong> El botón <strong>"Help"</strong> muestra la ventana de ayuda.</li>
+            <li><strong>Imagen de la Estación:</strong> Se muestra una imagen representativa de la estación de la <strong>última visita registrada</strong>.</li>
+        </ul>
+
+        <h2>2. Registro de una Nueva Visita (Ciudad y Fecha)</h2>
+        <ol>
+            <li>Vaya al menú superior y haga clic en <strong>"Registro"</strong> (<code>jMenu</code>).</li>
+            <li>Seleccione la opción <strong>"Ciudad y Fecha"</strong> (<code>jMenuItemCiudadFecha</code>).</li>
+            <li>Se abrirá una nueva ventana de diálogo (<strong>RegistroCiudadFecha</strong>).</li>
+            <li>Introduzca el <strong>nombre de la ciudad</strong> en el campo de texto.</li>
+            <li>Seleccione la <strong>fecha prevista</strong> de la visita usando el selector de fecha.</li>
+            <li>Si los campos son válidos (no están vacíos, según la validación), el botón <strong>"Registrar"</strong> se habilitará.</li>
+            <li>Haga clic en <strong>"Registrar"</strong> para guardar la visita. La tabla principal se actualizará automáticamente.</li>
+        </ol>
+
+        <h2>3. Registro de Temperaturas de la Última Visita</h2>
+        <p>
+            <strong>Nota:</strong> Esta opción está diseñada para añadir los datos de temperatura a la visita registrada más recientemente, asumiendo que esta última no tiene aún los datos de temperatura.
+        </p>
+        <ol>
+            <li>Vaya al menú superior y haga clic en <strong>"Registro"</strong> (<code>jMenu</code>).</li>
+            <li>Seleccione la opción <strong>"Temperaturas"</strong> (<code>jMenuItemTemperaturas</code>).</li>
+            <li>Se abrirá una nueva ventana de diálogo (<strong>RegistroTemperaturas</strong>).</li>
+            <li>Introduzca la <strong>Temperatura mínima (Tº mín)</strong> en el campo de texto.</li>
+            <li>Seleccione la <strong>Temperatura máxima (Tº máx)</strong> usando el spinner (o introduciéndola directamente).</li>
+            <li>Asegúrese de que la Temperatura Mínima sea estrictamente <strong>menor</strong> que la Temperatura Máxima.</li>
+            <li>Si los campos son válidos y la validación de temperatura se cumple, haga clic en <strong>"Registrar"</strong>.</li>
+            <li>El registro de la última visita en la lista se actualizará con estos nuevos datos y la tabla principal se refrescará y reordenará.</li>
+        </ol>
+    </body>
+</html>

@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package registroVisitasyClima.gui;
+package gui;
 
 import javax.swing.JOptionPane;
 import javax.swing.event.ChangeEvent;
 import org.netbeans.validation.api.builtin.stringvalidation.StringValidators;
 import org.netbeans.validation.api.ui.ValidationGroup;
-import registroVisitasyClima.dto.Visita;
-import registroVisitasyClima.logica.LogicaVisitas;
+import dto.Visita;
+import logica.LogicaVisitas;
 
 /**
  *
@@ -47,11 +47,11 @@ public class RegistroTemperaturas extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabelTempMin.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jLabelTempMin.text")); // NOI18N
+        jLabelTempMin.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jLabelTempMin.text_1")); // NOI18N
 
-        jLabelTempMax.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jLabelTempMax.text")); // NOI18N
+        jLabelTempMax.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jLabelTempMax.text_1")); // NOI18N
 
-        jTextFieldTempMin.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jTextFieldTempMin.text")); // NOI18N
+        jTextFieldTempMin.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jTextFieldTempMin.text_1")); // NOI18N
         jTextFieldTempMin.setName("Temperatura mínima"); // NOI18N
         jTextFieldTempMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class RegistroTemperaturas extends javax.swing.JDialog {
         );
 
         jButtonRegistrar.setBackground(new java.awt.Color(204, 102, 0));
-        jButtonRegistrar.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jButtonRegistrar.text")); // NOI18N
+        jButtonRegistrar.setText(org.openide.util.NbBundle.getMessage(RegistroTemperaturas.class, "RegistroTemperaturas.jButtonRegistrar.text_1")); // NOI18N
         jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarActionPerformed(evt);
@@ -114,7 +114,7 @@ public class RegistroTemperaturas extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(144, 144, 144)
                         .addComponent(jButtonRegistrar)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

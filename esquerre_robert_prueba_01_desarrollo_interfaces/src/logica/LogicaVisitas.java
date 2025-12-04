@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package registroVisitasyClima.logica;
+package logica;
 
 import java.util.*;
-import registroVisitasyClima.dto.Visita;
+import dto.Visita;
 
 /**
  *

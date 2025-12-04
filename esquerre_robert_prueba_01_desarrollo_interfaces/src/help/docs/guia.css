@@ -1,0 +1,29 @@
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+strong {
+    font-weight: bold;
+    color: #cc0000;
+}
+
+ol {
+    padding-left: 25px;
+}
+
+code {
+    background-color: #f0f0f0;
+    padding: 1px 3px;
+}

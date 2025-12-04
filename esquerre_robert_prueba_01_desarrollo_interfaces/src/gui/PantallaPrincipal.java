@@ -2,14 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package registroVisitasyClima.gui;
+package gui;
 
 import java.awt.Image;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.RowSorter;
 import javax.swing.SortOrder;
@@ -19,8 +18,9 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-import registroVisitasyClima.dto.Visita;
-import registroVisitasyClima.logica.LogicaVisitas;
+import dto.Visita;
+import help.Ayuda;
+import logica.LogicaVisitas;
 
 /**
  *
@@ -34,6 +34,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     private final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
 
+    private Ayuda ayuda;
+
     /**
      * Creates new form PantallaPrincipal
      */
@@ -42,6 +44,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         mostrarLookAndFeel();
         cambiarIconoApp();
         inicializarTabla();
+        ayuda = new Ayuda();
     }
 
     /**
@@ -61,6 +64,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabelTema = new javax.swing.JLabel();
         jComboLookAndFeel = new javax.swing.JComboBox<>();
+        jButtonHelp = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu = new javax.swing.JMenu();
         jMenuItemCiudadFecha = new javax.swing.JMenuItem();
@@ -81,13 +85,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable);
 
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
-        jLabelImgEstacion.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jLabelImgEstacion.text")); // NOI18N
+        jLabelImgEstacion.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jLabelImgEstacion.text_1")); // NOI18N
         jPanel1.add(jLabelImgEstacion);
 
         jButtonEliminarCiudad.setBackground(new java.awt.Color(153, 0, 0));
-        jButtonEliminarCiudad.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jButtonEliminarCiudad.text")); // NOI18N
+        jButtonEliminarCiudad.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jButtonEliminarCiudad.text_1")); // NOI18N
         jButtonEliminarCiudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEliminarCiudadActionPerformed(evt);
@@ -97,7 +101,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel2.setLayout(new javax.swing.BoxLayout(jPanel2, javax.swing.BoxLayout.LINE_AXIS));
 
-        jLabelTema.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jLabelTema.text")); // NOI18N
+        jLabelTema.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jLabelTema.text_1")); // NOI18N
         jPanel2.add(jLabelTema);
 
         jComboLookAndFeel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -108,9 +112,17 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
         jPanel2.add(jComboLookAndFeel);
 
-        jMenu.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenu.text")); // NOI18N
+        jButtonHelp.setBackground(new java.awt.Color(0, 102, 102));
+        jButtonHelp.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jButtonHelp.text")); // NOI18N
+        jButtonHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHelpActionPerformed(evt);
+            }
+        });
 
-        jMenuItemCiudadFecha.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenuItemCiudadFecha.text")); // NOI18N
+        jMenu.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenu.text_1")); // NOI18N
+
+        jMenuItemCiudadFecha.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenuItemCiudadFecha.text_1")); // NOI18N
         jMenuItemCiudadFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemCiudadFechaActionPerformed(evt);
@@ -118,7 +130,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         });
         jMenu.add(jMenuItemCiudadFecha);
 
-        jMenuItemTemperaturas.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenuItemTemperaturas.text")); // NOI18N
+        jMenuItemTemperaturas.setText(org.openide.util.NbBundle.getMessage(PantallaPrincipal.class, "PantallaPrincipal.jMenuItemTemperaturas.text_1")); // NOI18N
         jMenuItemTemperaturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemTemperaturasActionPerformed(evt);
@@ -135,23 +147,28 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(24, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonHelp)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonHelp))
                 .addContainerGap())
         );
 
@@ -198,7 +215,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         }
 
         String ciudadBorrar = JOptionPane.showInputDialog(this, "Introduce el nombre de la ciudad a eliminar", "Eliminar ciudad", JOptionPane.QUESTION_MESSAGE);
-        
+
         if (ciudadBorrar == null) {
             JOptionPane.showMessageDialog(this, "Operación cancelada", "Cancelado", JOptionPane.INFORMATION_MESSAGE);
             return;
@@ -225,6 +242,10 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Sabía que no te querías perder la visita a la ciudad " + visitaBorrar.getCiudad() + " en la fecha " + sdf.format(visitaBorrar.getFechaPrevista()), "Eliminación de visita cancelada", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_jButtonEliminarCiudadActionPerformed
+
+    private void jButtonHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHelpActionPerformed
+        ayuda.mostrarAyuda();
+    }//GEN-LAST:event_jButtonHelpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -253,6 +274,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonEliminarCiudad;
+    private javax.swing.JButton jButtonHelp;
     private javax.swing.JComboBox<String> jComboLookAndFeel;
     private javax.swing.JLabel jLabelImgEstacion;
     private javax.swing.JLabel jLabelTema;
@@ -286,7 +308,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
      */
     private void cambiarIconoApp() {
         // Carga la imagen
-        ImageIcon iconoApp = new ImageIcon(getClass().getResource("/registroVisitasyClima/gui/imgs/icono.jpg"));
+        ImageIcon iconoApp = new ImageIcon(getClass().getResource("/gui/imgs/icono.jpg"));
         // Lo convierte de icon a image
         Image iconoImagen = iconoApp.getImage();
         // Cambia el icono
@@ -355,7 +377,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         }
 
         Visita ultimaVisita = LogicaVisitas.getListaVisitas().getLast();
-        ImageIcon imgOriginal = new ImageIcon(getClass().getResource("/registroVisitasyClima/gui/imgs/" + ultimaVisita.getEstacion().toLowerCase() + ".png"));
+        ImageIcon imgOriginal = new ImageIcon(getClass().getResource("/gui/imgs/" + ultimaVisita.getEstacion().toLowerCase() + ".png"));
 
         Image img = imgOriginal.getImage();
         // Escala la imagen al tamaño del jLabel
